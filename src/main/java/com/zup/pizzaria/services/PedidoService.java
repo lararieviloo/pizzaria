@@ -5,16 +5,19 @@ import com.zup.pizzaria.models.Cliente;
 import com.zup.pizzaria.models.Pedido;
 import com.zup.pizzaria.repository.ClienteRepository;
 import com.zup.pizzaria.repository.PedidoRepository;
+import com.zup.pizzaria.repository.PagamentoRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class PedidoService {
     private final PedidoRepository pedidoRepository;
     private final ClienteRepository clienteRepository;
+    private final PagamentoRepository pagamentoRepository;
 
-    public PedidoService(PedidoRepository pedidoRepository, ClienteRepository clienteRepository) {
+    public PedidoService(PedidoRepository pedidoRepository, ClienteRepository clienteRepository, PagamentoRepository pagamentoRepository) {
         this.pedidoRepository = pedidoRepository;
         this.clienteRepository = clienteRepository;
+        this.pagamentoRepository = pagamentoRepository;
     }
 
     public PedidoDTO criarPedido(Pedido pedido) {
