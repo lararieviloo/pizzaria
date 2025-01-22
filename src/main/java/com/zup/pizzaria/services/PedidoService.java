@@ -29,6 +29,6 @@ public class PedidoService {
                 .findById(pedido.getClienteId())
                 .orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
 
-        return new PedidoDTO(cliente.getNome(), cliente.getEmail(), pedido.getDescricao());
+        return new PedidoDTO(cliente.getNome(), cliente.getEmail(), pedido.getDescricaoPedido(), pedido.getValorTotalPedido());
     }
 }

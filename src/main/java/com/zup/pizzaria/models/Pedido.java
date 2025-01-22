@@ -7,17 +7,18 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Pedido {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String descricao;
+    private String descricaoPedido;
     private Long clienteId;
-    private double valorTotal;
+    private double valorTotalPedido;
 
-    public Pedido(Long clienteId, String descricao, double valorTotal) {
+    public Pedido(Long clienteId, String descricao, double valorTotalPeido) {
         this.clienteId = clienteId;
-        this.descricao = descricao;
-        this.valorTotal = valorTotal;
+        this.descricaoPedido = descricao;
+        this.valorTotalPedido = valorTotalPedido;
     }
 
     public Long getId() {
@@ -28,12 +29,12 @@ public class Pedido {
         this.id = id;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getDescricaoPedido() {
+        return descricaoPedido;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setDescricaoPedido(String descricaoPedido) {
+        this.descricaoPedido = descricaoPedido;
     }
 
     public Long getClienteId() {
@@ -44,12 +45,12 @@ public class Pedido {
         this.clienteId = clienteId;
     }
 
-    public double getValorTotal() {
-        return valorTotal;
+    public double getValorTotalPedido() {
+        return valorTotalPedido;
     }
 
-    public void setValorTotal(double valorTotal) {
-        this.valorTotal = valorTotal;
+    public void setValorTotalPedido(double valorTotalPedido) {
+        this.valorTotalPedido = valorTotalPedido;
     }
 }
 

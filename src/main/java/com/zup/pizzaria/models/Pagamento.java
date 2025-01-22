@@ -23,7 +23,6 @@ public class Pagamento {
         this.valorPago = valorPago;
         this.dataHoraPagamento = dataHoraPagamento;
         this.formaPagamento = formaPagamento;
-
     }
 
     public Long getId() {
